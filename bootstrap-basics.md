@@ -1,8 +1,152 @@
-#Part 1: Form Creation and Layout
-Build a Registration Form using Bootstrap’s form components:
-  Include fields for First Name, Last Name, Email, Password, and a checkbox for agreeing to terms.
-  Use Bootstrap’s grid layout to position the First Name and Last Name fields side-by-side.
-  Apply validation classes to ensure the Email and Password fields are required.
-  Add a Submit button styled with btn-success.
-  All in a '''.container border'''
+## Part 1: Form Creation and Layout
+
+  - Include fields for First Name, Last Name, Email, Password, and a checkbox for agreeing to terms.
+  - Use Bootstrap’s grid layout to position the First Name and Last Name fields side-by-side.
+  - Apply validation classes to ensure the Email and Password fields are required.
+  - Add a Submit button styled with ``.btn-success``.
+  - Added a ``.container border`` in the div and added a ``margin: 10vh`` for the top of the body.
+
+        <!-- ******************************************************************************* -->
+        <!-- Part 1: Form Creation and Layout -->
+        <!-- ******************************************************************************* -->
+        
+        <body style="margin: 10vh;">
+            <div class="container border p-4 bg-light">
+                <form class="justify-content-center align-items-center">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="mb-3 justify-content-center align-items-center">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+
+## Part 2: Table for Displaying Data
+
+- Created a table using Bootstrap’s table component.
+- Hard-code user data into the table to simulate submissions.
+- Add striped and hoverable rows for better readability.
+- Maked the table responsive by wrapping it in a ``.table-responsive`` div.
+- In the div added ``.container border``, ``p-4`` for padding, amd ``bg-light`` for background color.
+      <!-- ******************************************************************************* -->
+      <!-- Part 2: Table for Displaying Data -->
+      <!-- ******************************************************************************* -->
   
+      <div class="container border p-4  bg-light table-responsive">
+          <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">3</th>
+                      <td>John</td>
+                      <td>Doe</td>
+                      <td>@social</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  ## Part 3: Image and Button Utilities
+  #### Add an Image Section:
+  - Include a responsive image using the ``.img-fluid`` class.
+  - Place the image inside a fluid container to stretch it across the page.
+  ---------------------------------------------------------------------------
+  - Added a circular image ``.rounded-circle`` below the main image.
+  - Added css to make the image smaller and fixed to the bottom left of the screen
+
+        <!-- ******************************************************************************* -->
+        <!-- Part 3: Image Utilities -->
+        <!-- ******************************************************************************* -->
+        <div class="container border">
+        <img src="https://plus.unsplash.com/premium_photo-1681746821512-c3a8fa6cb5e5?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="img-fluid" alt="..."
+            style="min-width: 100%; max-height: 200px; object-fit: cover; object-position: center;">
+
+        <img src="https://plus.unsplash.com/premium_photo-1681746821512-c3a8fa6cb5e5?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="rounded-circle fixed-img" alt="...">
+        </div>   
+            <style>
+                .fixed-img{
+                    max-height: 15%;
+                    object-fit: cover;
+                    object-position: center;
+                    position: fixed;
+                    left: 1%;
+                    bottom: 3%;
+                }
+            </style>
+  #### Create Two Buttons with Utility Classes:
+  - One button should be visible on all screen sizes.
+  - The second button should be hidden on small screens using responsive display utilities ``d-none`` and ``d-md-block``.
+
+        <!-- ******************************************************************************* -->
+        <!-- Part 3:Button Utilities -->
+        <!-- ******************************************************************************* -->
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary container border" type="button">Button</button>
+            <!-- visible on all screen sizes-->
+            <button class="btn btn-primary d-md-block d-none container border" type="button">Button</button>
+            <!--hidden on small screens-->
+        </div>
+## Part 4: Navigation Bar
+#### Build a Responsive Navigation Bar:
+- Create a navbar with links to Home, About, and Contact sections.
+- Ensure the navbar collapses into a hamburger menu on smaller screens.
+- Use Bootstrap utilities and components to style the navbar. 
+      <!-- ******************************************************************************* -->
+      <!-- Part 4: Navigation Bar -->
+      <!-- ******************************************************************************* -->
+      
+      <nav class="navbar navbar-expand-lg bg-body-tertiary container border p-2" style="top: 0px">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                  aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#">Contact</a>
+                      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
