@@ -14,7 +14,7 @@
 <!-- Part 4: Navigation Bar -->
 <!-- ******************************************************************************* -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary container border p-2" style="top: 0px">
+<nav class="navbar navbar-expand-lg bg-body-tertiary container border p-2" style="top: 0px; ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -24,8 +24,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Features</a>
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </div>
         </div>
@@ -49,18 +49,14 @@
                 </div>
             </div>
             <br>
-            <div class="mb-3 justify-content-center align-items-center">
+            <div class="mb-3 justify-content-center align-items-center required">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
         </form>
@@ -68,7 +64,7 @@
     <!-- ******************************************************************************* -->
     <!-- Part 3: Image Utilities -->
     <!-- ******************************************************************************* -->
-    <div class="container border">
+    <div class="container border p-0">
         <img src="https://plus.unsplash.com/premium_photo-1681746821512-c3a8fa6cb5e5?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             class="img-fluid" alt="..."
             style="min-width: 100%; max-height: 200px; object-fit: cover; object-position: center;">
@@ -91,7 +87,7 @@
     <!-- Part 2: Table for Displaying Data -->
     <!-- ******************************************************************************* -->
 
-    <div class="container border p-4  bg-light">
+    <div class="container border p-4  bg-light table-responsive">
         <table class="table table-hover">
             <thead>
                 <tr>
